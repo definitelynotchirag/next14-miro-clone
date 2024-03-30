@@ -22,7 +22,7 @@ export const ConvexClientProvider = ({
   children,
 }: ConvexClientProviderProps) => {
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
         <Authenticated>
         {children}
